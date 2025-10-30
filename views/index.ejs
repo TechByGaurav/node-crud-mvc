@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Students List</title>
+ <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+ <h1>Students List</h1>
+ <a href="/add" class="btn">Add Student</a>
+ <table>
+ <tr>
+ <th>Name</th>
+ <th>Email</th>
+ <th>Age</th>
+ <th>Actions</th>
+ </tr>
+ <% students.forEach(student => { %>
+ <tr>
+ <td><%= student.name %></td>
+ <td><%= student.email %></td>
+ <td><%= student.age %></td>
+ <td>
+ <a href="/edit/<%= student._id %>">Edit</a>
+ <a href="/delete/<%= student._id %>">Delete</a>
+ </td>
+ </tr>
+ <% }) %>
+ </table>
+</body>
+</html>
