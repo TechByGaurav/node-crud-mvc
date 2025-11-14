@@ -1,7 +1,146 @@
-This project is a simple yet complete CRUD (Create, Read, Update, Delete) application built using Node.js, Express, and MongoDB. It demonstrates how to build a RESTful API and connect it with a MongoDB database to perform all basic data operations.
+# Node.js CRUD MVC Project
 
-The backend is developed using Express.js to handle HTTP requests and routes efficiently, while Mongoose is used as an ODM (Object Data Modeling) library for interacting with MongoDB. Each operation — adding new data, displaying all records, updating existing entries, and deleting records — is implemented with clean and structured code following the MVC architecture for better scalability and maintainability.
+A clean and structured Node.js CRUD application implementing the **MVC (Model-View-Controller)** architecture. This project performs **Create, Read, Update, and Delete (CRUD)** operations with proper layering and maintainable code.
 
-This project helps beginners understand how server-side logic interacts with the database in real-world web applications. It can serve as a foundation for building larger applications such as inventory systems, student management apps, or task trackers.
+---
 
-Technologies used: Node.js, Express.js, MongoDB, Mongoose, HTML/CSS (for basic UI), and Postman for API testing.
+## 🚀 Tech Stack
+
+* **Node.js**
+* **Express.js**
+* **MongoDB + Mongoose**
+* **EJS / Handlebars / React (if used)**
+* **MVC Architecture**
+
+---
+
+## 📂 Project Structure (MVC)
+
+```
+project/
+│── controllers/
+│     └── studentController.js
+│── models/
+│     └── Student.js
+│── routes/
+│     └── studentRoutes.js
+│── views/
+│     └── *.ejs
+│── config/
+│     └── db.js
+│── server.js
+│── package.json
+```
+
+### ✔ Model (Database Layer)
+
+Defines MongoDB schema and structure.
+
+### ✔ View (UI Layer)
+
+Responsible for rendering UI templates.
+
+### ✔ Controller (Logic Layer)
+
+Handles request logic and interacts with the database.
+
+---
+
+## 🛠️ Features
+
+### 🔹 Create
+
+Add new records to MongoDB.
+
+### 🔹 Read
+
+Retrieve all or specific records.
+
+### 🔹 Update
+
+Modify existing data.
+
+### 🔹 Delete
+
+Remove records permanently.
+
+---
+
+## 🌐 API Endpoints
+
+| Method     | Endpoint        | Description       |
+| ---------- | --------------- | ----------------- |
+| **POST**   | `/students`     | Create a student  |
+| **GET**    | `/students`     | Get all students  |
+| **GET**    | `/students/:id` | Get student by ID |
+| **PUT**    | `/students/:id` | Update student    |
+| **DELETE** | `/students/:id` | Delete student    |
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1. Clone the Repository
+
+```
+git clone https://github.com/your-username/node-crud-mvc.git
+cd node-crud-mvc
+```
+
+### 2. Install Dependencies
+
+```
+npm install
+```
+
+### 3. Configure MongoDB
+
+In `/config/db.js`:
+
+```
+mongoose.connect("mongodb://localhost:27017/mvc-crud");
+```
+
+### 4. Run the Server
+
+```
+npm start
+```
+
+Server will run at:
+
+```
+http://localhost:5000
+```
+
+---
+
+## 🧪 Example API Test (Postman)
+
+POST request:
+
+```
+http://localhost:5000/students
+```
+
+Body (JSON):
+
+```
+{
+  "name": "Gaurav",
+  "email": "gaurav@example.com",
+  "course": "MERN"
+}
+```
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome. Follow MVC pattern and maintain clean code.
+
+---
+
+## 📜 License
+
+MIT License.
