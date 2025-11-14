@@ -120,7 +120,7 @@ http://localhost:5000
 POST request:
 
 ```
-http://localhost:5000/students
+http://localhost:3000/add
 ```
 
 Body (JSON):
