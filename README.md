@@ -25,7 +25,11 @@ project/
 │── routes/
 │     └── studentRoutes.js
 │── views/
-│     └── *.ejs
+│     └── index.ejs
+|     └── add.ejs
+|     └── edit.ejs
+|── public/
+|   └──style.css 
 │── app.js
 │── package.json
 ```
