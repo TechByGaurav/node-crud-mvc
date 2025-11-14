@@ -106,7 +106,7 @@ mongoose.connect("mongodb://localhost:27017/mvc-crud");
 ### 4. Run the Server
 
 ```
-npm start
+nodemon app.js
 ```
 
 Server will run at:
