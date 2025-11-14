@@ -26,7 +26,7 @@ project/
 │     └── studentRoutes.js
 │── views/
 │     └── *.ejs
-│── server.js
+│── app.js
 │── package.json
 ```
 
@@ -93,7 +93,7 @@ npm install
 
 ### 3. Configure MongoDB
 
-In server.js file
+In app.js file
 
 ```
 mongoose.connect("mongodb://localhost:27017/mvc-crud");
@@ -108,7 +108,7 @@ npm start
 Server will run at:
 
 ```
-http://localhost:5000
+http://localhost:3000
 ```
 
 ---
