@@ -26,8 +26,6 @@ project/
 │     └── studentRoutes.js
 │── views/
 │     └── *.ejs
-│── config/
-│     └── db.js
 │── server.js
 │── package.json
 ```
@@ -70,12 +68,12 @@ Remove records permanently.
 
 | Method     | Endpoint        | Description       |
 | ---------- | --------------- | ----------------- |
-| **POST**   | `/students`     | Create a student  |
-| **GET**    | `/students`     | Get all students  |
-| **GET**    | `/students/:id` | Get student by ID |
-| **PUT**    | `/students/:id` | Update student    |
-| **DELETE** | `/students/:id` | Delete student    |
-
+| **POST**   | `/add`          | Create a student  |
+| **GET**    | `/`             | Get all students  |
+| **GET**    | `/edit/:id`     | Get student by ID |
+| **POST**   | `/edit/:id`     | Update student    |
+|**GET**     |  `/delete/:id`  | Delete student    |
+ 
 ---
 
 ## ⚙️ Setup Instructions
@@ -95,7 +93,7 @@ npm install
 
 ### 3. Configure MongoDB
 
-In `/config/db.js`:
+In server.js file
 
 ```
 mongoose.connect("mongodb://localhost:27017/mvc-crud");
