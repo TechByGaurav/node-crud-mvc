@@ -100,7 +100,7 @@ npm install
 In app.js file
 
 ```
-mongoose.connect("mongodb://localhost:27017/mvc-crud");
+mongoose.connect("mongodb://localhost:27017/studentDB");
 ```
 
 ### 4. Run the Server
